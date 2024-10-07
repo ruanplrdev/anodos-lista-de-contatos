@@ -1,8 +1,9 @@
 // lib/axios.js
+import { getAuthToken } from '@/utils/cookies';
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseURL: "http://localhost:3000/api", // URL base da API
+    baseURL: "http://localhost:4000/api", // URL base da API
     timeout: 10000, // Tempo limite da requisição
     headers: {
         'Content-Type': 'application/json',
@@ -11,7 +12,7 @@ const axiosInstance = axios.create({
 
 // Interceptor para adicionar o token JWT, se necessário
 axiosInstance.interceptors.request.use((config) => {
-    const token = localStorage.getItem('token'); // ou cookies, dependendo da sua implementação
+    const token = getAuthToken(); // ou cookies, dependendo da sua implementação
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
     }
