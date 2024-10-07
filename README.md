@@ -16,21 +16,21 @@ Certifique-se de ter as seguintes ferramentas instaladas no seu ambiente:
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
-```
+   git clone https://github.com/ruanplrdev/anodos-lista-de-contatos
+   cd anodos-lista-de-contatos
+    ```
 2. Crie o arquivo `.env` na raiz do projeto:
 
    No arquivo `.env`, você precisa definir as variáveis de ambiente do projeto. Um exemplo de configuração seria:
 
    ```makefile
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=admin
-POSTGRES_DB=anodos_lista_de_contatos_db
-NEXT_PUBLIC_API_URL=http://localhost:4000/api
+    POSTGRES_USER=postgres
+    POSTGRES_PASSWORD=admin
+    POSTGRES_DB=anodos_lista_de_contatos_db
+    NEXT_PUBLIC_API_URL=http://localhost:4000/api
    ```
    
-3.Suba os containers com Docker Compose:
+3. Suba os containers com Docker Compose:
 
 Para iniciar os containers do backend, frontend e banco de dados, execute o comando abaixo:
 
