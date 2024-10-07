@@ -10,5 +10,4 @@ router.get("/contacts", authMiddleware, getContact);
 router.put("/contacts/:id", authMiddleware, updateContact);
 router.delete("/contacts/:id", authMiddleware, roleMiddleware('admin'), deleteContact);
 
-
 export default router;

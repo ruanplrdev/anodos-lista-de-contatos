@@ -25,21 +25,32 @@ export const createContact = async (req: Request, res: Response) => {
     }
 };
 
+
 export const getContact = async (req: Request, res: Response) => {
     try {
         const contactRepo = AppDataSource.getRepository(Contact);
 
-        const contacts = await contactRepo.find({
-            where: { userId: {id: req.user.id} },  
-            relations: ['userId'],
-        });
-
-        res.status(201).json(contacts);
+        // Verifica se o usuário tem o papel de admin
+        if (req.user.role === 'admin') {
+            // Se for admin, retorna todos os contatos
+            const contacts = await contactRepo.find({
+                relations: ['userId'], // Mantenha as relações necessárias
+            });
+            return res.status(200).json(contacts);
+        } else {
+            // Se não for admin, retorna apenas os contatos do usuário atual
+            const contacts = await contactRepo.find({
+                where: { userId: {id: req.user.id} },  
+                relations: ['userId'],
+            });
+            return res.status(200).json(contacts);
+        }
     } catch (error) {
         console.error('Erro ao buscar contatos:', error);
         res.status(500).json({ message: 'Erro ao buscar contatos' });
     }
 };
+
 
 export const deleteContact = async (req: Request, res: Response) => {
     const { id } = req.params;

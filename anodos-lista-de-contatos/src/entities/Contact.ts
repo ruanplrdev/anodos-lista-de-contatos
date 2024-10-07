@@ -7,13 +7,13 @@ export class Contact {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({nullable: false })
     name: string;
 
     @Column()
     address: string;
 
-    @Column()
+    @Column({nullable: false })
     phone: string;
 
     @Column()
