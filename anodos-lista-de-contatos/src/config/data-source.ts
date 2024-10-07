@@ -7,9 +7,9 @@ import { UserProfile } from "../entities/UserProfile";
 
 export const AppDataSource = new DataSource({
   "type": "postgres",
-  "host": "localhost",
+  "host": "db",
   "port": 5432,
-  "username": "api_user",
+  "username": "postgres",
   "password": "admin",
   "database": "anodos_lista_de_contatos_db",
   "synchronize": true,  // apenas para desenvolvimento, crie as tabelas automaticamente

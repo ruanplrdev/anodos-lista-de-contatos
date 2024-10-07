@@ -23,7 +23,7 @@ AppDataSource.initialize()
         // Chamar a função para criar o usuário admin
         createAdminUser();
 
-        const PORT = process.env.TYPEORM_PORT || 3000;
+        const PORT = process.env.TYPEORM_PORT || 4000;
         app.listen(PORT, () => {
             console.log(`Server running on port ${PORT}`);
         });
