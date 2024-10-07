@@ -38,11 +38,11 @@ Para iniciar os containers do backend, frontend e banco de dados, execute o coma
 docker-compose up
 ```
 
-4.Acessar a aplicação:
+4. Acessar a aplicação:
 - O frontend estará disponível em: http://localhost:3000
 - O backend estará rodando em: http://localhost:4000
 
-5.Encerrar os containers:
+5. Encerrar os containers:
 
 Para parar os containers, você pode usar:
 
