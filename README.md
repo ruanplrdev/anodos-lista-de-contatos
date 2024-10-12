@@ -41,7 +41,7 @@ docker-compose up
 4. Acessar a aplicação:
 - O frontend estará disponível em: http://localhost:3000
 - O backend estará rodando em: http://localhost:4000
-
+- O Sistema criar por padrão o usuário admin: `user@admin.com:admin`
 5. Encerrar os containers:
 
 Para parar os containers, você pode usar:
