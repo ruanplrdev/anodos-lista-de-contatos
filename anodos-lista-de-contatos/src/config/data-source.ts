@@ -1,13 +1,14 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import { UserLogin } from "../entities/UserLogin"
-import { Contact } from '../entities/Contact';
-import { UserProfile } from "../entities/UserProfile";
+import { UserLogin } from "../entitys/UserLogin"
+import { Contact } from '../entitys/Contact';
+import { UserProfile } from "../entitys/UserProfile";
 
 
 export const AppDataSource = new DataSource({
   "type": "postgres",
-  "host": "db",
+  // "host": "db",
+  "host": "localhost", // descomente no modo dev
   "port": 5432,
   "username": "postgres",
   "password": "admin",

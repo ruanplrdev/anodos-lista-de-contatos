@@ -1,5 +1,5 @@
 import { AppDataSource } from '../config/data-source'; // Ajuste o caminho conforme necessário
-import { UserLogin } from '../entities/UserLogin'; // Ajuste o caminho conforme necessário
+import { UserLogin } from '../entitys/UserLogin'; // Ajuste o caminho conforme necessário
 import bcrypt from 'bcryptjs';
 
 const createAdminUser = async () => {

@@ -1,26 +1,26 @@
 
 services:
-  frontend:
-    build:
-      context: ./anodos-lista-de-contatos-front
-    container_name: nextjs-app
-    ports:
-      - '3000:3000'
-    depends_on:
-      - api
+  # frontend:
+  #   build:
+  #     context: ./anodos-lista-de-contatos-front
+  #   container_name: nextjs-app
+  #   ports:
+  #     - '3000:3000'
+  #   depends_on:
+  #     - api
 
-  api:
-    build:
-      context: ./anodos-lista-de-contatos
-    container_name: express-api
-    ports:
-      - '4000:4000'
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: anodos_lista_de_contatos_db
-    depends_on:
-      - db
+  # api:
+  #   build:
+  #     context: ./anodos-lista-de-contatos
+  #   container_name: express-api
+  #   ports:
+  #     - '4000:4000'
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: admin
+  #     POSTGRES_DB: anodos_lista_de_contatos_db
+  #   depends_on:
+  #     - db
 
   db:
     image: postgres:13

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { AppDataSource } from '../config/data-source';
-import { Contact } from '../entities/Contact';
-import { UserLogin } from '../entities/UserLogin';
+import { Contact } from '../entitys/Contact';
+import { UserLogin } from '../entitys/UserLogin';
 
 export const createContact = async (req: Request, res: Response) => {
     try {

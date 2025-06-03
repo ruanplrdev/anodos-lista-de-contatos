@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import { AppDataSource } from '../config/data-source';
-import { UserLogin } from '../entities/UserLogin';
+import { UserLogin } from '../entitys/UserLogin';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { UserProfile } from '../entities/UserProfile';
+import { UserProfile } from '../entitys/UserProfile';
 
 export const register = async (req: Request, res: Response) => {
     const { email, password, name, address, phone, role } = req.body;
